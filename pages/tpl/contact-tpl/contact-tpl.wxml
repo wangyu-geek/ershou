@@ -1,0 +1,33 @@
+<template name="contact-tpl">
+  <view class="sundry-container">
+    <view class="contact-container">
+      <view catchtap="onContactTap" data-contact-way="{{contact_way}}" data-contact-number="{{contact_number}}">
+        <block wx:if="{{contact_way == '手机'}}">
+          <image class="contact-img" src="/imgs/icon/phone.png"></image>
+          <view class="contact-way">{{substr_contact}}</view>
+        </block>
+        <block wx:elif="{{contact_way == 'QQ'}}">
+          <image class="contact-img" src="/imgs/icon/qq.png"></image>
+          <view class="contact-way">{{substr_contact}}</view>
+        </block>
+        <block wx:elif="{{contact_way == '微信'}}">
+          <image class="contact-img" src="/imgs/icon/wechat.png"></image>
+          <view class="contact-way">{{substr_contact}}</view>
+        </block>
+        <block wx:else>
+          <view class="contact-way">{{"留言"}}</view>
+        </block>
+      </view>
+    </view>
+    <!-- <text class="contact-way">小纸条</text>
+    <text class="contact-way">小纸条</text> -->
+    <view class="knife-shipping">
+      <view wx:if="{{postage_free == 1}}" class="yellow-container">
+        <text>包邮</text>
+      </view>
+      <view wx:if="{{can_be_knife == 1}}" class="yellow-container">
+        <text>可小刀</text>
+      </view>
+    </view>
+  </view>
+</template>

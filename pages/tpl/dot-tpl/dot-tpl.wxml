@@ -1,0 +1,7 @@
+<template name="dot-tpl">
+<view class="border-dot"></view>
+</template>
+
+<template name="hr-dot-tpl">
+<view class="hr-border-dot"></view>
+</template>

@@ -1,0 +1,50 @@
+.sundry-container {
+  margin-left: 32rpx;
+  margin-top: 25rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  vertical-align: center;
+}
+
+.sundry-container text {
+  font-size: 14px;
+}
+
+.contact-container{
+  background: #e2fffe;
+  height: 61rpx;
+  padding-right: 17rpx;
+  padding-left: 17rpx;
+  border-radius: 8px;
+}
+
+.contact-way {
+  color: #0edcd3;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.contact-img{
+  width:30rpx;
+  height:30rpx;
+  vertical-align: middle;
+}
+
+.knife-shipping{
+  display: flex;
+  flex-direction: row;
+}
+
+.yellow-container{
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  border-radius: 10px;
+  background: #ffd33c;
+  margin-right: 30rpx;
+}
+
+.yellow-container text{
+  color: white;
+}
+

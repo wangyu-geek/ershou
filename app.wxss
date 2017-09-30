@@ -1,0 +1,29 @@
+/**app.wxss**/
+
+page {
+  font-family: "Microsoft Yahei";
+  background: #f3f6f8;
+}
+
+.container {
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  font-size: 35rpx;
+}
+
+.avatar-img {
+  height: 90rpx;
+  width: 90rpx;
+  border-radius: 100px;
+}
+
+del{
+  text-decoration:line-through;
+  color:#aaa;
+  font-size: 25rpx;
+}
+
+.white{
+  background-color: #fff;
+}

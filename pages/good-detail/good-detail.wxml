@@ -1,0 +1,63 @@
+ <import src="../tpl/price-tpl/price-tpl.wxml" />
+<import src="../tpl/dot-tpl/dot-tpl.wxml" />
+<import src="../tpl/user-info-tpl/user-info-tpl.wxml" />
+<import src="../tpl/description-tpl/description-tpl.wxml" />
+<import src="../tpl/contact-tpl/contact-tpl.wxml" />
+<import src="../tpl/operate-tpl/operate-tpl.wxml" />
+<import src="../tpl/comment-tpl/comment-tpl.wxml" /> 
+<import src="../tpl/modal-tpl/modal-tpl.wxml" /> 
+
+ <view class="container">
+  <view class="top-container white">
+
+    <view class="good-img-container">
+      <swiper class="swiper-imgs" indicator-dots="true" indicator-active-color="#3b95e8" indicator-color="#ece6d8">
+        <block wx:for="{{goods.imgs}}" wx:for-item="item">
+          <swiper-item>
+            <image class="item-img" mode="aspectFill" lazyload="true" src="{{item.img_url.url}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <template is="price-tpl" data="{{sale_price:goods.sale_price,original_price:goods.original_price}}"></template>
+    <template is="hr-dot-tpl"></template>
+    <view wx:if="{{goods.is_me == true}}">
+      <view class="operate-img-container">
+        <view class="white-btn button" catchtap="onDecPriceTap">降价</view>
+        <view class="white-btn button" catchtap="onSignSaledTap">标记出售</view>
+      </view>
+      <template is="hr-dot-tpl"></template>
+    </view>
+     <template is="user-info-tpl" data="{{...goods.user,create_time:goods.create_time}}"></template>
+    <template is="description-tpl" data="{{description:goods.description}}"></template>
+    <template is="contact-tpl" data="{{contact_way:goods.contact_way,contact_number:goods.contact_number,postage_free:goods.postage_free,can_be_knife:goods.can_be_knife,substr_contact:goods.substr_contact}}"></template>
+    <template is="dot-tpl"></template>
+    <template is="operate-tpl" data="{{id:goods.id,collected:goods['user_collect'][0]['collected'],collectCount:goods.collect_count,commentCount:goods.comment_count}}"></template> 
+  </view>
+  <view class="bottom-container white">
+    <view class="comment-count-container">
+      <view class="comment-const">评论
+        <text class="comment-count">{{goods.comment_count}}</text>
+      条</view>
+    </view>
+    <view class="comments-container">
+      <view wx:if="{{goods.comment_count == 0}}" class="no-comments-container">
+        <image class="no-comments-image" src="/imgs/icon/no_comments.png" wx:if="{{goods.comment_count == 0}}"></image>
+        <view>还没有评论，你来试试?</view>
+      </view>
+      <block wx:for="{{comments}}" wx:for-item="item" wx:key="unique">
+        <view class="comment">
+          <template is="comment-tpl" data="{{...item.user,content:item.content,create_time:item.create_time}}"></template>
+        </view>
+      </block>
+    </view>
+  </view>
+  <form class="comment-form" bindsubmit="onCommentSubmit">
+    <view class="input-comment-container white">
+      <input name="comment" class="input-comment" type="text" value="{{comment}}"/>
+      <button form-type="submit" hover-class="input-button-hover" class="font-size-15">发送</button>
+    </view>
+  </form>
+  <template is="modal-tpl" data="{{showModal,decPrice}}"></template>
+</view>

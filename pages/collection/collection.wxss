@@ -1,0 +1,2 @@
+/* pages/collection/collection.wxss */
+@import "../tpl/collection-tpl/collection-tpl.wxss";

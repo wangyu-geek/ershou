@@ -1,0 +1,25 @@
+<import src="/pages/tpl/operate-tpl/operate-tpl.wxml"/>
+<import src="/pages/tpl/user-info-tpl/user-info-tpl.wxml"/>
+<import src="/pages/tpl/price-tpl/price-tpl.wxml"/>
+<import src="/pages/tpl/dot-tpl/dot-tpl.wxml"/>
+<import src="/pages/tpl/contact-tpl/contact-tpl.wxml"/>
+<import src="/pages/tpl/description-tpl/description-tpl.wxml"/>
+
+<template name="good-tpl">
+  <view class="good-container">
+    <view catchtap="onGoodTap" data-id="{{goodInfo.id}}">
+      <template is="user-info-tpl" 
+        data="{{avatar_url:goodInfo.user.avatar_url,nick_name:goodInfo.user.nick_name,create_time:goodInfo.create_time,school_name:goodInfo.user.school_name}}">
+      </template>
+
+      <image class="main-img" lazyload="true"  mode="aspectFill" src="{{goodInfo.main_img_url?goodInfo.main_img_url:'/imgs/icon/no-image.png'}}"></image>
+      <template is="price-tpl" data="{{sale_price:goodInfo.sale_price,original_price:goodInfo.original_price}}"></template>
+      <template is="description-tpl" data="{{description:goodInfo.description}}"></template>
+      <template is="contact-tpl" data="{{...goodInfo}}"></template>
+    </view>
+
+    <template is="dot-tpl"></template>
+    <template is="operate-tpl" data="{{id:goodInfo.id,collectCount:goodInfo.collect_count,commentCount:goodInfo.comment_count,collected:goodInfo['user_collect'][0]['collected'],index}}">></template>
+  </view>
+
+</template>

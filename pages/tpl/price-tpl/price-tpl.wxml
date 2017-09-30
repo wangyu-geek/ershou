@@ -1,0 +1,8 @@
+<template name="price-tpl">
+  <view class="good-price-container">
+    <text class="const-yuan">￥</text>
+
+    <text class="good-price">{{sale_price}}</text>
+    <del wx:if="{{original_price != 0}}">￥ {{original_price}}</del>
+  </view>
+</template>

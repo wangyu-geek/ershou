@@ -1,0 +1,15 @@
+.border-dot {
+  margin: 44rpx 30rpx 44rpx 32rpx;
+  border-top: 2px dotted #f2f2f2;
+}
+
+.border-dot {
+  margin: 44rpx 30rpx 44rpx 32rpx;
+  border-top: 2px dotted #f2f2f2;
+}
+
+.hr-border-dot {
+  margin-top: 22rpx;
+  margin-bottom: 22rpx;
+  border-top: 2px dotted #f2f2f2;
+}

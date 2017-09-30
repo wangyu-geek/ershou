@@ -1,0 +1,70 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="container">
+    <view class="white add-img-container">
+      <block wx:for="{{selectedImgs}}" wx:for-item="item" wx:key="unique">
+        <view class="img-grid-container" catchtap="onChooseImgTap">
+          <image name="images" class="add-img" src="{{item}}"></image>
+          <input type="text" name="{{index}}" hidden="{{true}}" value="{{item}}"/>
+        </view>
+      </block>
+      <block wx:if="{{selectingImgCount > 0}}">
+        <view class="img-grid-container" catchtap="onChooseImgTap">
+          <image class="add-img" src="/imgs/icon/add_img.png"></image>
+        </view>
+      </block>
+    </view>
+
+    <view class="white mg-top-30 textarea-container">
+      <textarea name="description" maxlength="140" auto-height="true" class="textarea" placeholder="详细描述几成新，购买时间都有助于吸引更多人关注哦!" placeholder-class="placeholder" />
+      <label class="number remain-words-num">140</label>
+    </view>
+
+    <view class="mg-top-30 price-container">
+
+      <view class="input-container">
+        <view class="label-input">
+          <label>想卖</label>
+          <input name="sale_price" class="inputs" type="number" placeholder="￥0.00" value="{{wantSellPrice == null?null:wantSellPrice}}" bindinput="onWantSellInput" />
+        </view>
+        <checkbox-group name="can_be_knife" bindchange="onKnifeChange">
+          <label class="blue-label">
+            <checkbox value="{{canBeKnife}}" color="#55a6f1" />
+            可小刀
+        </label>
+        </checkbox-group>
+      </view>
+
+      <view class="input-container">
+        <view class="label-input">
+          <label>原价</label>
+          <input name="original_price" class="inputs" type="digit" placeholder="￥0.00" value="{{originalPrice == null?null:originalPrice}}" bindinput="onOriginalPriceInput" />
+        </view>
+      </view>
+
+    </view>
+
+    <view class="input-container">
+      <view class="label-input">
+        <label>包邮</label>
+      </view>
+      <label class="blue-label">
+    <switch name="postage_free"  class="switch" color="#55a6f1" type="switch" bindchange="onSwitchChange" />
+    </label>
+    </view>
+
+    <text class="sub-heading">联系方式</text>
+
+    <view class="input-container">
+      <view class="label-input">
+        <picker range="{{contacts}}" mode="selector" bindchange="onContactWayChange">
+          <label>{{contacts[contactKey]}}</label>
+          <input type="text" hidden="true" name="contact_way" value="{{contacts[contactKey]}}"/>
+          <image class="arrow" src="/imgs/icon/arrow_down@black.png"></image>
+        </picker>
+        <input name="contact_number" class="inputs" type="text" placeholder="(选填)" />
+      </view>
+    </view>
+
+    <button formType="submit" class="mg-top-30 submit-btn" type="primary">发布</button>
+  </view>
+</form>

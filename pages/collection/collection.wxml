@@ -1,0 +1,5 @@
+<import src="../tpl/collection-tpl/collection-tpl.wxml"/>
+
+<view>
+    <template is="collection-tpl"></template>    
+</view>

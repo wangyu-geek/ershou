@@ -1,0 +1,48 @@
+/* my.wxss */
+
+.big-avatar-img {
+    width: 138rpx;
+    height: 138rpx;
+    margin-left: 43rpx;
+}
+
+.tip-image {
+    width: 33rpx;
+    height: 31rpx;
+    margin-left: 43rpx;
+}
+
+.arrow-right {
+    width: 17rpx;
+    height: 24rpx;
+    margin-right: 30rpx;
+}
+
+.tool-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    vertical-align: middle;
+    align-items: center;
+    background-color: #fff;
+    margin-top: 39rpx;
+}
+
+.tip-and-image {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.height-253{
+  height: 235rpx;
+}
+
+.height-116{
+  height: 116rpx;
+}
+
+
+.tip-text{
+  margin-left: 29rpx;
+}

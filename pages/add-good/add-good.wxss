@@ -1,0 +1,113 @@
+ .white {
+  background: #fff;
+} 
+
+.mg-top-30 {
+  margin-top: 30rpx;
+}
+
+.mg-left-43 {
+  margin-left: 43rpx;
+}
+
+.pd-left-43 {
+  padding-left: 43rpx;
+}
+
+.add-img-container {
+  padding-top: 60rpx;
+}
+
+.img-grid-container {
+  float: left;
+  margin-left: 10rpx;
+  margin-right: 21rpx;
+}
+
+.add-img {
+  height: 157rpx;
+  width: 157rpx;
+}
+
+.textarea-container {
+  padding-left: 35rpx;
+  padding-top: 40rpx;
+}
+
+.textarea {
+  min-height: 255rpx;
+  width: 650rpx;
+}
+
+.remain-words-num {
+  float: right;
+  margin-right: 25rpx;
+  margin-bottom: 25rpx;
+  font-size: 30rpx;
+  color: #444;
+}
+
+.input-container {
+  display: inline-flex;
+   justify-content: space-between; 
+   vertical-align: middle;
+  height: 80rpx;
+  width: 100%;
+  border-bottom: 1px solid #f2f2f2;
+  padding-top: 46rpx; 
+  background: #fff;
+}
+
+.label-input {
+  margin-left: 43rpx;
+}
+
+.blue-label{
+  margin-right: 27rpx;
+}
+
+.switch{
+  margin-right: 30rpx;
+  margin-top: -15rpx;
+  vertical-align: middle;
+  align-items: center;
+  display: inline-block;
+  
+}
+
+.inputs{
+  width: 206rpx;
+  left:28rpx;
+  display: inline-block;
+  height: 56rpx;
+  min-height: 56rpx; 
+  vertical-align: middle;
+  margin-left: 54rpx;
+}
+
+
+picker{
+  display: inline-block;
+}
+
+.arrow{
+  width: 15rpx;
+  height: 12rpx;
+  margin-left: 18rpx;
+  vertical-align: middle;
+}
+
+.sub-heading{
+  font-size: 29rpx;
+  color: #99aec1;
+  margin:37rpx 0 15rpx 43rpx;
+}
+ 
+ button[type="primary"]{
+  width: 680rpx;
+  background-color:#55a6f1;
+}  
+
+.submit-btn{
+  margin-bottom: 30rpx;
+}

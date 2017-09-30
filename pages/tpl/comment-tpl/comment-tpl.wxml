@@ -1,0 +1,7 @@
+<import src="/pages/tpl/user-info-tpl/user-info-tpl.wxml" />
+<template name="comment-tpl">
+    <view class="comment-tpl-container">
+        <template is="user-info-tpl" data="{{avatar_url,nick_name,create_time,school_name,create_time}}"></template>
+        <view class="param-content">{{content}}</view>
+    </view>
+</template>

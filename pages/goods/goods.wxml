@@ -1,0 +1,16 @@
+<import src="../tpl/good-tpl/good-tpl.wxml" />
+
+<view class="goods-container">
+  <view class="classname"></view>
+  <block wx:for="{{goodsInfo}}" wx:for-item="item">
+    <template is="good-tpl" data="{{goodInfo:item,index:index}}"></template>
+  </block>
+  <view class="add-good-container" catchtap="onAddTap">
+    <view class="add-btn">
+      <image class="add-img" src="/imgs/icon/add.png"></image>
+    </view>
+  </view>
+</view>
+
+<!-- <button catchtap="testTap">test</button>
+<button catchtap="form">form</button> -->

@@ -1,0 +1,31 @@
+@import "../tpl/good-tpl/good-tpl.wxss";
+
+.goods-container{
+  background: #f3f6f8;
+}
+
+.add-good-container{
+  position: fixed;
+  bottom: 53rpx;
+  right: 53rpx;
+
+}
+
+.add-btn{
+  background: #6dea9f;
+  opacity: 0.6;
+  width: 117rpx;
+  height: 117rpx;
+  border-radius: 100px;
+
+ 
+}
+
+.add-img{
+  width: 52rpx;
+  height: 52rpx;
+  z-index: 2;
+  margin-top: 35rpx;
+  margin-left: 32rpx;
+}
+

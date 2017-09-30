@@ -1,0 +1,8 @@
+.good-description {
+  margin:53rpx 20rpx 38rpx 32rpx;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 25px;
+  color: black;
+}

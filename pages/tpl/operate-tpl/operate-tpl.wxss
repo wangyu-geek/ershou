@@ -1,0 +1,31 @@
+.good-bottom-container{
+  margin-left: 32rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  vertical-align: center;
+}
+
+.good-bottom-container text{
+  color: #557592;
+  font-size: 13px;
+}
+
+.operate-icon-container image,.share-button{
+  height: 56rpx;
+  width: 54rpx;
+  margin-right: 30rpx;
+}
+
+.share-button{
+  display: inline-block;
+  background-color: #fff;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+.share-button::after{
+  border: 0;
+}

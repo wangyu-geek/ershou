@@ -1,0 +1,30 @@
+@import "/pages/tpl/operate-tpl/operate-tpl.wxss";
+@import "/pages/tpl/user-info-tpl/user-info-tpl.wxss";
+@import "/pages/tpl/price-tpl/price-tpl.wxss";
+@import "/pages/tpl/dot-tpl/dot-tpl.wxss";
+@import "/pages/tpl/contact-tpl/contact-tpl.wxss";
+@import "/pages/tpl/description-tpl/description-tpl.wxss";
+
+.good-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30rpx;
+  background: #fff;
+}
+
+.main-img {
+  width: 563rpx;
+  height: 336rpx;
+  margin: 37rpx 0 0 32rpx;
+}
+
+.good-description {
+  margin-left: 32rpx;
+  margin-right: 20rpx;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 25px;
+  color: black;
+}
+

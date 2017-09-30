@@ -1,0 +1,23 @@
+<view class="container">
+    <view class='tool-bar' catchtap='onPersonInfoTap'>
+        <view class='tip-and-image height-253'>
+            <image class="big-avatar-img" src="{{userInfo.avatarUrl?userInfo.avatarUrl:'/imgs/icon/user@default.png'}}"></image>
+            <view class='tip-text'>{{userInfo.nickName?userInfo.nickName:'未名'}}</view>
+        </view>
+        <image class='arrow-right'  src="/imgs/icon/arrow_right.png"></image>
+    </view>
+    <!-- <view class='tool-bar' catchtap='onCollectionTap'>
+        <view class='tip-and-image height-116'>
+            <image class='tip-image' src="/imgs/icon/collection.png"></image>
+            <view class='tip-text'>我的收藏</view>
+        </view>
+        <image class='arrow-right'  src="/imgs/icon/arrow_right.png"></image>
+    </view> -->
+    <view class='tool-bar' catchtap='onContactTap'>
+        <view class='tip-and-image height-116'>
+            <image class='tip-image' src="/imgs/icon/message.png"></image>
+            <view class='tip-text'>联系我们</view>
+        </view>
+        <image class='arrow-right' src="/imgs/icon/arrow_right.png"></image>
+    </view>
+</view>

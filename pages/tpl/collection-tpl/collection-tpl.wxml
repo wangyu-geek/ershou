@@ -1,0 +1,9 @@
+<import src="../price-tpl/price-tpl.wxml" />
+<import src="../description-tpl/description-tpl.wxml" />
+<template name="collection-tpl">
+    <view class="white">
+        <image class="main-img" lazyload="true"  mode="aspectFill" src="/imgs/icon/no-image.png"></image>
+        <template is="price-tpl" data="{{sale_price,original_price}}"></template>
+        <view></view>
+    </view>
+</template>

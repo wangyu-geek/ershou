@@ -1,0 +1,15 @@
+<template name="user-info-tpl">
+  <view class="good-header">
+     <image class="avatar-img" src="{{avatar_url?avatar_url:'/imgs/icon/user@default.png'}}"></image> 
+    <view class="good-title">
+      <view class="good-owner-container">
+        <text class="good-owner-name">{{nick_name}}</text>
+      </view>
+      <view class="good-info-container">
+        <text class="good-create-time">{{create_time}}</text>
+        <text class="const-from">来自</text>
+        <text>[{{school_name}}]</text>
+      </view>
+    </view>
+  </view>
+</template>

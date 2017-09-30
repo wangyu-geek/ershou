@@ -1,0 +1,3 @@
+<template name="description-tpl">
+ <view class="good-description">{{description}}</view>
+</template>

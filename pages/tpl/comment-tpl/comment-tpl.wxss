@@ -1,0 +1,14 @@
+@import "/pages/tpl/user-info-tpl/user-info-tpl.wxss";
+
+.comment-tpl-container{
+    padding-top: 44rpx;
+    padding-bottom: 38rpx;
+    background-color: #fff;
+}
+
+
+
+.param-content{
+    margin-top: 44rpx;
+    margin-left: 160rpx;
+}

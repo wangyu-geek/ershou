@@ -1,0 +1,17 @@
+<template name="operate-tpl">
+    <view class="good-bottom-container">
+      <view class="classname">
+        <text>{{collectCount}}</text>
+        <text>喜欢</text>
+        <text> · </text>
+        <text>{{commentCount}}</text>
+        <text>评论</text>
+      </view>
+      <view class="operate-icon-container">
+        <image src="{{collected?'/imgs/icon/like@selected.png':'/imgs/icon/like.png'}}" catchtap="onLikeTap" data-id="{{id}}" data-index="{{index}}" data-collected="{{collected}}"></image>
+        <image src="/imgs/icon/comment.png"></image>
+        <button class="share-button" open-type="share" data-id="{{id}}"><image src="/imgs/icon/share.png"></image>
+        </button>
+      </view>
+    </view>
+</template>

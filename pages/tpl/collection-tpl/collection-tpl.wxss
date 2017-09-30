@@ -1,0 +1,7 @@
+@import "../price-tpl/price-tpl.wxss";
+@import "../description-tpl/description-tpl.wxss";
+.main-img {
+  width: 563rpx;
+  height: 336rpx;
+  margin: 37rpx 0 0 32rpx;
+}

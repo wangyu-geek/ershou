@@ -1,0 +1,31 @@
+.good-header {
+  display: flex;
+  flex-direction: row;
+  margin-left: 32rpx;
+  margin-top: 18rpx;
+}
+
+.good-title {
+  margin-left: 30rpx;
+  flex-direction: column;
+  align-items: center;
+}
+
+.good-owner-container .good-owner-name {
+  font-size: 15px;
+}
+
+.good-info-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.good-info-container text {
+  margin-top: 13rpx;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.const-from {
+  margin-left: 8rpx;
+}
